@@ -95,7 +95,8 @@ https?:\/\/task\.jegotrip\.com\.cn\:8080\/app\/tasks\?userid - script-response-b
 # 2.依次点击"我的" 👉 "任务中心". 通知成功写入「 TaskID 」.
 0 7 * * * https://ooxx.be/js/jegotrip.js, tag=无忧行, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jegotrip.png, enabled=true
 
-#京东赚赚0 1 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdzz.js, tag=京东赚赚, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdzz.png, enabled=true
+#京东赚赚
+0 1 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdzz.js, tag=京东赚赚, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdzz.png, enabled=true
 
 
 #京东金融养猪猪
