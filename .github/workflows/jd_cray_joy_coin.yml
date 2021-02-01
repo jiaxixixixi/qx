@@ -13,7 +13,6 @@ on:
     types: jd_crazy_joy_coin
 jobs:
   build:
-
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
@@ -33,7 +32,6 @@ jobs:
           npm install
       - name: '运行 【疯狂的joy在线挂机】'
         run: |
-          cd ~/qx
           node jd_crazy_joy_coin.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
