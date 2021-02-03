@@ -13,9 +13,13 @@ on:
     types: jd_crazy_joy_coin
 jobs:
   build:
+
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
+      - name: Checkout
+        run: |
+          git clone -b master https://github.com/jiaxixixixi/jd_scripts.git ~/jd_scripts
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -29,11 +33,11 @@ jobs:
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
       - name: npm install
         run: |
-          cd ~/qx
+          cd ~/jd_scripts
           npm install
       - name: '运行 【疯狂的joy在线挂机】'
         run: |
-          cd ~/qx
+          cd ~/jd_scripts
           node jd_crazy_joy_coin.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
